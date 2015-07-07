@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="awesomeMusicApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Jeviteca</title>
+    <script src="vendor/angular.min.js"></script>
+    <script src="vendor/angular-route.min.js"></script>
+    <script src="vendor/angular-route-segment.js"></script>
+    <!-- Llamada app.js antes controladores  -->
+    <script src="scripts/app.js"></script>
+    <!-- Llamada a todos los controladores necesarios  -->
+    <script src="scripts/controllers/bandaController.js"></script>
+    <script src="scripts/controllers/NavController.js"></script>
+    <script src="scripts/controllers/albumController.js"></script>
+    <script src="scripts/controllers/generoController.js"></script>
+
+
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jeviteca</h1>
+        </header>
+        <nav >
+            <ul class="nav nav-tabs">
+                <li ng-class="{'active':toAlbum()}"><a href="#/albumes">Álbumes</a></li>
+                <li ng-class="{'active':toBanda()}"><a href="#/bandas">Bandas</a></li>
+                <li ng-class="{'active':toGenero()}"><a href="#/generos">Géneros</a></li>
+            </ul>
+
+        </nav>
+        <section app-view-segment="0"></section>
+    </div>
+
+</body>
+</html>
