@@ -9,7 +9,12 @@ angular.module("awesomeMusicApp").config(["$routeSegmentProvider", function($rou
 
     $routeSegmentProvider.segment("album",{
         controller:"albumController",
-        templateUrl:"views/albumView.html"
+        templateUrl:"views/albumView.html",
+        resolve:{
+            albums:["albumsProvider",function(albumsProvider){
+                return albumsProvider.getAlbums();
+            }]
+        }
     });
     $routeSegmentProvider.segment("banda",{
         controller:"bandaController",
