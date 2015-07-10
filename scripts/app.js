@@ -9,15 +9,30 @@ angular.module("awesomeMusicApp").config(["$routeSegmentProvider", function($rou
 
     $routeSegmentProvider.segment("album",{
         controller:"albumController",
-        templateUrl:"views/albumView.html"
+        templateUrl:"views/albumView.html",
+        resolve:{
+            albums:["albumsProvider",function (albumsProvider){
+                return albumsProvider.getAlbums();
+            }]
+        }
     });
     $routeSegmentProvider.segment("banda",{
         controller:"bandaController",
-        templateUrl:"views/bandaView.html"
+        templateUrl:"views/bandaView.html",
+        resolve:{
+            bands:["bandsProvider",function (bandsProvider){
+                return bandsProvider.getBands();
+            }]
+        }
     });
     $routeSegmentProvider.segment("genero",{
         controller:"generoController",
-        templateUrl:"views/generoView.html"
+        templateUrl:"views/generoView.html",
+        resolve:{
+            genres:["genresProvider", function (genresProvider){
+                return genresProvider.getGenres();
+            }]
+        }
     });
 
 
