@@ -1,0 +1,14 @@
+<tr>
+			<td rowspan="2"><img ng-src="{{ rutaImg(album.image)}}" class="img-thumbnail" ></td>
+		    <td>{{album.band.name}} - {{ album.title }} ({{album.year}})</td>
+		    <td rowspan="2">
+				<b>Canciones:</b>
+				<ul ng-repeat="track in album.tracklist">
+					<li>{{track}}</li>
+					
+				</ul>
+			</td>	
+		</tr>
+		  <tr>
+	 		<td>Genero: {{album.genre.name}}</td>
+</tr>

@@ -3,4 +3,7 @@ angular.module("awesomeMusicApp").service("albumsProvider",["$http", function($h
 	this.getAlbums=function (){
 		return $http.get("data/albums.json");
 	};
+	this.getImageAlbum=function (name){
+		return "img/"+name;
+	};
 }]);

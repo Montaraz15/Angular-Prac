@@ -3,6 +3,7 @@ angular.module("awesomeMusicApp",["ngRoute","route-segment","view-segment"]);
 
 angular.module("awesomeMusicApp").config(["$routeSegmentProvider", function($routeSegmentProvider){
 
+    // $routeSegmentProvider.when("/","album");
     $routeSegmentProvider.when("/albumes","album");
     $routeSegmentProvider.when("/bandas","banda");
     $routeSegmentProvider.when("/generos","genero");
