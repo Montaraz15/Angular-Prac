@@ -1,9 +1,11 @@
-angular.module("awesomeMusicApp").directive("album",["albumsProvider", function (albumsProvider){
+
+angular.module("awesomeMusicApp").directive("albumDirective",["albumsProvider", function (albumsProvider){
+
 	return {
 		restrict: "AE",
-		replace: true,
-		templateURL:"views/albumDetail.html",
-		scope:{
+		// replace: true,
+		templateUrl:"views/albumDetail.html",
+		scope: {
 			datos: "="
 		},
 		link: function(scope) {
@@ -13,3 +15,5 @@ angular.module("awesomeMusicApp").directive("album",["albumsProvider", function 
 		}		
 	};
 }]);
+
+

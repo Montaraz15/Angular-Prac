@@ -1,14 +1,16 @@
-<tr>
-			<td rowspan="2"><img ng-src="{{ rutaImg(album.image)}}" class="img-thumbnail" ></td>
-		    <td>{{album.band.name}} - {{ album.title }} ({{album.year}})</td>
-		    <td rowspan="2">
-				<b>Canciones:</b>
-				<ul ng-repeat="track in album.tracklist">
-					<li>{{track}}</li>
-					
-				</ul>
-			</td>	
-		</tr>
-		  <tr>
-	 		<td>Genero: {{album.genre.name}}</td>
-</tr>
+
+	
+		<td><img ng-src="{{ rutaImg(datos.image)}}" class="img-thumbnail" ></td>
+	    <td><b>{{datos | titleAlbum}}</b></br>{{datos.genre.name}}</td>
+	    
+	    <td>
+			<b>Canciones:</b>
+			<ul ng-repeat="track in datos.tracklist">
+				<li>{{track}}</li>
+				
+			</ul>
+		</td>	
+	
+	
+		
+

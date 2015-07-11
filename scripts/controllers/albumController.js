@@ -9,8 +9,6 @@ function($scope,albumsProvider){
 			alert("No se ha podido cargar");
 		}
 	);
-	$scope.rutaImg= function (name){
-		return albumsProvider.getImageAlbum(name);
-	};
+	
 
 }]);
