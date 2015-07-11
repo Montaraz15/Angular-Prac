@@ -1,8 +1,6 @@
-<h1>Banda</h1>
+
 <table class="table table-striped">
 	<tbody>
-		<tr ng-repeat="band in bands">
-			<td>{{ band.name }}</td>
-		</tr>
+		<tr ng-repeat="band in bands | orderBy:'name'" band-directive datos="band"></tr>
 	</tbody>
 </table>

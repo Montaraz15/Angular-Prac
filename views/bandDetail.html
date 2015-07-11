@@ -1,0 +1,10 @@
+<tr>
+	<td>{{datos.name}}</td>
+	<td>{{datos.origin}}</td>
+	<td>
+		<ul>
+			<u>Miembros:</u>
+			<li ng-repeat="member in datos.members">{{member.name}} {{member.instruments | instruments}}</li>
+		</ul>
+	</td>
+</tr>
