@@ -1,8 +1,6 @@
-<h1>Genero</h1>
+
 <table class="table table-striped">
 	<tbody>
-		<tr ng-repeat="genre in genres">
-			<td>{{ genre.name }}</td>
-		</tr>
+		<tr ng-repeat="genre in genres" genre-directive datos="genre"></tr>
 	</tbody>
 </table>
