@@ -9,4 +9,7 @@ angular.module("awesomeMusicApp").controller("NavController",["$scope","$routeSe
     $scope.toGenero = function(){
         return $routeSegment.startsWith("genero");
     };
+    $scope.toFavorito = function () {
+    	return $routeSegment.startsWith("favorito");
+    };
 }]);
