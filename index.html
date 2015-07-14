@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="awesomeMusicApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Jeviteca</title>
+    <script src="vendor/angular.min.js"></script>
+    <script src="vendor/angular-route.min.js"></script>
+    <script src="vendor/angular-route-segment.js"></script>
+    <!-- Llamada app.js antes controladores  -->
+    <script src="scripts/app.js"></script>
+    <!-- Llamada a todos los controladores necesarios  -->
+    <script src="scripts/controllers/bandaController.js"></script>
+    <script src="scripts/controllers/NavController.js"></script>
+    <script src="scripts/controllers/albumController.js"></script>
+    <script src="scripts/controllers/generoController.js"></script>
+    <script src="scripts/controllers/favsController.js"></script>
+    <script src="scripts/controllers/favAlbumController.js"></script>
+    <script src="scripts/controllers/favBandController.js"></script>
+    <!-- Llama a los servicios -->
+    <script src="scripts/services/albumsProvider.js"></script>
+    <script src="scripts/services/bandsProvider.js"></script>
+    <script src="scripts/services/genresProvider.js"></script>
+    <!-- Llama Directivas -->
+    <script src="scripts/directives/albumsDirective.js"></script>
+    <script src="scripts/directives/bandsDirective.js"></script>
+    <script src="scripts/directives/genresDirective.js"></script>
+    <!-- Llamada a filtros -->
+    <script src="scripts/filters/titleAlbumFilter.js"></script>
+    <script src="scripts/filters/instruments.js"></script>
+
+
+    <link rel="stylesheet" href="styles/css/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jeviteca</h1>
+        </header>
+        <nav >
+            <ul class="nav nav-tabs">
+                <li ng-class="{'active':toAlbum()}"><a href="#/albumes">Álbumes</a></li>
+                <li ng-class="{'active':toBanda()}"><a href="#/bandas">Bandas</a></li>
+                <li ng-class="{'active':toGenero()}"><a href="#/generos">Géneros</a></li>
+                <li ng-class="{'active':toFavorito()}"><a href="#/favoritos">Favoritos</a></li>
+            </ul>
+
+        </nav>
+        <section app-view-segment="0"></section>
+    </div>
+
+</body>
+</html>

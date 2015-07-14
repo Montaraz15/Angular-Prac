@@ -1,0 +1,23 @@
+
+	
+		<td><img ng-src="{{ rutaImg(datos.image)}}" class="img-thumbnail" ></td>
+	    <td>
+	    	<b>{{datos | titleAlbum}}</b></br>
+	    	{{datos.genre.name}}</br>
+	    	<button type="button" class="btn btn-default btn-lg">
+	    		<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> Favorito
+			</button>
+
+	    </td>
+	    
+	    <td>
+			<b>Canciones:</b>
+			<ul>
+				<li ng-repeat="track in datos.tracklist">{{track}}</li>
+				
+			</ul>
+		</td>	
+	
+	
+		
+

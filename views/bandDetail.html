@@ -1,0 +1,14 @@
+<tr>
+	<td>{{datos.name}}</td>
+	<td>{{datos.origin}}</br>
+		<button type="button" class="btn btn-default btn-lg">
+	    		<span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> Favorito
+		</button>
+	</td>
+	<td>
+		<ul>
+			<u>Miembros:</u>
+			<li ng-repeat="member in datos.members">{{member.name}} {{member.instruments | instruments}}</li>
+		</ul>
+	</td>
+</tr>
